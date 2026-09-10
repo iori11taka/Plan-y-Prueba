@@ -1,2 +1,8 @@
 import { defineConfig } from 'vite';
-export default defineConfig({ base: './', build: { chunkSizeWarningLimit: 800 } });
+
+export default defineConfig({
+  base: '/Plan-y-Prueba/',
+  build: {
+    chunkSizeWarningLimit: 800
+  }
+});
