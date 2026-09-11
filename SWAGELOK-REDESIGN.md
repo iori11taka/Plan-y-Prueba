@@ -11,3 +11,9 @@ Cambios principales:
 - Base de Vite configurada para `/Plan-y-Prueba/` en GitHub Pages.
 
 Validación: `npm test` ejecutado con 6/6 pruebas aprobadas.
+
+## Actualización de logotipo del documento
+
+- Se reemplazó el monograma de texto `SW+` de la vista previa por el logotipo circular `S` suministrado.
+- El mismo logotipo se incorpora en el encabezado de los PDF exportados.
+- El recurso visual está en `public/swagelok-s-logo.png`; la versión embebida para PDF está en `src/logo-data.js`.

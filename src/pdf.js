@@ -1,6 +1,7 @@
 import { jsPDF } from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import {formatDate, FORMAT_APPROVALS} from './model.js';
+import { SWAGELOK_S_LOGO_DATA } from './logo-data.js';
 const ink=[0,75,135], green=[234,243,249], gray=[91,105,120];
 export function createPDF(d, selection='both') {
   const pdf=new jsPDF({unit:'mm',format:'a4'}); let y=38, currentTitle='', first=true;
@@ -8,8 +9,10 @@ export function createPDF(d, selection='both') {
   const text=v=>String(v||'—');
   const header=()=>{
     const page=pdf.internal.getCurrentPageInfo().pageNumber;if(drawnHeaders.has(page))return;drawnHeaders.add(page);
-    pdf.setFillColor(...ink);pdf.rect(0,0,210,29,'F');pdf.setTextColor(255,255,255);pdf.setFont('helvetica','bold');pdf.setFontSize(9);pdf.text('SWAGELOK PERÚ  |  PLAN & PRUEBA',12,10);
-    pdf.setTextColor(255);pdf.setFontSize(12);pdf.text(currentTitle,12,18);pdf.setFontSize(7);pdf.setFont('helvetica','normal');pdf.text('Fuga y/o estanqueidad de sistemas integrados',12,24);
+    pdf.setFillColor(...ink);pdf.rect(0,0,210,29,'F');
+    pdf.addImage(SWAGELOK_S_LOGO_DATA,'PNG',12,4.2,18,18,undefined,'FAST');
+    pdf.setTextColor(255,255,255);pdf.setFont('helvetica','bold');pdf.setFontSize(9);pdf.text('SWAGELOK PERÚ  |  PLAN & PRUEBA',34,10);
+    pdf.setTextColor(255);pdf.setFontSize(12);pdf.text(currentTitle,34,18);pdf.setFontSize(7);pdf.setFont('helvetica','normal');pdf.text('Fuga y/o estanqueidad de sistemas integrados',34,24);
     pdf.setFontSize(8);pdf.text(text(d.formCode).slice(0,40),198,10,{align:'right'});pdf.text(`Versión ${text(d.version).slice(0,20)}`,198,15,{align:'right'});
   };
   const begin=title=>{if(!first)pdf.addPage();first=false;currentTitle=title;y=36;header();};
