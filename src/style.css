@@ -10,3 +10,101 @@
 .field>span{font-size:14px}.field input,.field select,.field textarea{font-size:16px}.card-heading p{font-size:14px}.connection-grid{grid-template-columns:repeat(auto-fit,minmax(135px,1fr))}.connection select{font-size:14px;padding:5px 7px 10px;min-height:38px}.connection-count{font-size:12px}.nav-item{font-size:14px}.sidebar-bottom p{font-size:12px}.completion-card p{font-size:12px}.completion-card strong,.completion-card span{font-size:12px}.tip{font-size:12px}.preview-heading h3,.preview-tabs button{font-size:14px}.save-status{font-size:12px;max-width:160px}.preview-caption,.preview-caption button{font-size:12px}.btn{font-size:14px}.inline-note{font-size:14px}.page-heading p{font-size:16px}.card-heading h3{font-size:17px}
 @media(max-width:1200px) and (min-width:681px){.nav-item{font-size:12px}.save-status{max-width:110px}.top-actions .btn{font-size:12px}.preview-caption{flex-wrap:wrap;gap:6px}}
 @media(max-width:680px){.save-status{max-width:108px;font-size:11px}.top-actions .btn{font-size:12px}.nav-item{font-size:13px}.completion-card>div:first-child{flex-wrap:wrap}.preview-caption{flex-wrap:wrap;gap:6px}.page-heading p{font-size:14px}}
+
+/* =========================================================
+   SWAGELOK PERÚ · CORPORATE UI OVERRIDES
+   Visual refresh only; application behavior remains intact.
+   ========================================================= */
+:root{
+  --sw-blue:#004b87;
+  --sw-blue-dark:#003a6b;
+  --sw-blue-deep:#002f58;
+  --sw-blue-soft:#eaf3f9;
+  --sw-blue-pale:#f4f8fb;
+  --sw-red:#c8102e;
+  --ink:#004b87;
+  --lime:#5da9dd;
+  --muted:#667787;
+  --line:#d9e2e9;
+  color:#263746;
+  background:#f3f6f8;
+}
+body{background:#f3f6f8;color:#263746}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,label[tabindex]:focus-visible{outline:3px solid #78b7e2}
+input,select,textarea{color:#263746;border-color:#cfd9e1;border-radius:6px;background:#fff}
+input:focus,textarea:focus,select:focus{border-color:var(--sw-blue);box-shadow:0 0 0 3px rgba(0,75,135,.10)}
+input[type=radio]{accent-color:var(--sw-blue)}
+
+.sidebar{background:linear-gradient(180deg,var(--sw-blue-deep) 0%,var(--sw-blue-dark) 55%,#00294e 100%);color:#dbe8f2;border-right:1px solid rgba(255,255,255,.08)}
+.sidebar::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:var(--sw-red)}
+.brand{gap:13px;margin-bottom:44px;letter-spacing:0}
+.brand-mark{width:42px;height:42px;border-radius:4px;background:#fff;color:var(--sw-blue);font-family:Arial,sans-serif;font-weight:800;font-size:24px;box-shadow:0 0 0 1px rgba(255,255,255,.35)}
+.brand-copy{display:flex;flex-direction:column;min-width:0}
+.brand-copy strong{font-family:Arial,Helvetica,sans-serif;font-size:21px;line-height:1;font-weight:700;letter-spacing:-.5px;color:#fff}
+.brand small{color:#a9c8df;margin-top:7px;font-size:8.5px;letter-spacing:1.45px}
+.sidebar-group{color:#7faed0;font-weight:700}
+.workspace-label{color:#fff;font-weight:600;border-left:2px solid #63b1e6;padding-left:11px}
+.workspace-label svg{color:#63b1e6}
+.nav-item{color:#c5d9e7;border-radius:5px}
+.nav-item:hover:not(.active){background:rgba(255,255,255,.07);color:#fff}
+.nav-item.active{background:#fff;color:var(--sw-blue);font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.10)}
+.step-number{border-color:rgba(255,255,255,.28)}
+.active .step-number{border-color:#9ac5e2;background:var(--sw-blue-soft);color:var(--sw-blue)}
+.sidebar-bottom{border-top:1px solid rgba(255,255,255,.12)}
+.template-label{color:#fff}.template-label>svg{color:#6db4e4}.template-label small,.sidebar-bottom p,.local-label{color:#9fc0d8}
+
+.topbar{height:78px;border-bottom:1px solid #d7e0e7;padding:0 34px;background:#fff;box-shadow:0 1px 0 rgba(0,48,86,.02)}
+.topbar::after{content:"";position:absolute;left:248px;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--sw-blue) 0 84%,var(--sw-red) 84% 100%)}
+.breadcrumb{color:#778898}.breadcrumb strong{color:#33485a;font-weight:600}
+.btn{border-radius:5px;min-height:40px;font-weight:650}
+.primary{background:var(--sw-blue);border-color:var(--sw-blue);box-shadow:0 1px 2px rgba(0,52,95,.18)}
+.primary:hover{background:var(--sw-blue-dark);border-color:var(--sw-blue-dark)}
+.secondary{border-color:#cfd9e1;color:#365268}.secondary:hover{background:#f4f8fb;border-color:#b9c9d5}
+.quiet{color:#536a7b}.quiet:hover{background:#edf4f8;color:var(--sw-blue)}
+.icon-btn{color:#5b7487}.icon-btn:hover{background:#eaf3f9;color:var(--sw-blue)}
+
+main{padding-top:32px}
+.page-heading{position:relative;background:#fff;border:1px solid #d8e2e9;border-left:4px solid var(--sw-blue);border-radius:7px;padding:23px 25px;margin-bottom:28px;box-shadow:0 3px 14px rgba(27,62,86,.04)}
+.page-heading::after{content:"";position:absolute;right:0;top:0;width:92px;height:3px;background:var(--sw-red);border-radius:0 7px 0 0}
+.eyebrow{color:var(--sw-blue);font-weight:800;letter-spacing:1.35px}.eyebrow span{color:#9eb0be}
+h1{color:#17364f;font-size:27px;letter-spacing:-.75px}
+.page-heading p{color:#677b8b;max-width:720px}
+.draft-badge{border-color:#cfe0ec;background:#f5f9fc;color:var(--sw-blue);font-weight:650}
+.section-heading .eyebrow{color:var(--sw-blue)}
+.section-heading h2{color:#183b56}
+.save-status,.save-status svg{color:#5f8098}
+
+.card{border-radius:7px;border-color:#d8e2e9;box-shadow:0 3px 14px rgba(35,67,88,.035);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#d7e9f5}
+.card-heading{padding-bottom:15px;border-bottom:1px solid #edf1f4;margin-bottom:20px}
+.card-heading h3{color:#1f425d}.card-heading p{color:#728494}
+.field>span{color:#405c70;font-weight:600}.required{color:var(--sw-red)}
+.inline-note{border-color:#cfe0ec;background:#eef6fb;color:#587286;border-radius:6px}
+.inline-note>svg{color:var(--sw-blue)}.inline-note strong{color:#31556f}
+.editor-footer{border-top-color:#d9e2e9}
+
+.preview-column{background:#e8eef3;border-color:#d3dee6;border-radius:7px;box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}
+.preview-heading>div{color:var(--sw-blue)}.preview-heading h3{color:#31556f;font-weight:700}
+.preview-tabs{background:#d6e0e8;border-radius:5px}.preview-tabs button{color:#607789}.preview-tabs button.selected{color:var(--sw-blue);border-bottom:2px solid var(--sw-blue);border-radius:3px}
+.paper{color:#36546a;border:1px solid #d8e1e7;box-shadow:0 7px 20px rgba(23,57,80,.12)}
+.paper-header{border-bottom-color:var(--sw-blue)}
+.paper-logo{color:var(--sw-blue);font-family:Arial,Helvetica,sans-serif;letter-spacing:-1.3px}.paper-logo span{color:#5d8fb3}
+.paper-conditions{background:#eef5fa}.paper h4{color:var(--sw-blue)}
+.paper-result{background:#edf5fa}
+.preview-caption button{color:var(--sw-blue)}
+.completion-card{border-color:#cfdce6;background:#fff}.progress-track{background:#dbe6ee}.progress-track>div{background:linear-gradient(90deg,var(--sw-blue-dark),#2b8bc8)}
+.tip{border-color:#d0e0eb;background:#f4f9fc;color:#5d7587}.tip>svg{color:var(--sw-blue)}
+
+.upload-zone{border-color:#bdceda;background:#f8fbfd}.upload-zone:hover,.upload-zone.dragover{border-color:var(--sw-blue);background:#edf6fb}.upload-icon{background:#e6f2fa;color:var(--sw-blue)}
+.legend-grid b{background:#edf5fa;border-color:#cbdde9;color:var(--sw-blue)}
+.connection{border-color:#d4e0e8;background:#f8fafc}.connection.pass,.paper-connections .pass{background:#edf7ed;border-color:#c9dfc9}.connection.fail,.paper-connections .fail{background:#fff0f0;border-color:#e8c4c4}.connection.na,.paper-connections .na{background:#edf3f8}
+.row-card{border-color:#d9e3ea;background:#fbfcfd}
+
+.toast{background:var(--sw-blue-dark);border-color:var(--sw-blue);border-radius:5px}.toast.error{background:#9f2437;border-color:#9f2437}
+dialog{border-color:#cfdbe4;border-radius:8px;color:#29475d}dialog::backdrop{background:rgba(8,35,55,.62)}
+.modal-heading h2{color:#183b56}.export-options label{border-color:#d2dde5;border-radius:6px}.export-options label:has(input:checked){border-color:var(--sw-blue);background:#eef6fb}.export-options svg{color:var(--sw-blue)}
+.app-footer{color:#6d8090;border-top-color:#dbe3e9}.app-footer>span:first-child{color:var(--sw-blue);font-weight:800;letter-spacing:.8px}
+
+@media(max-width:1200px){.topbar::after{left:214px}}
+@media(max-width:980px){.topbar::after{left:185px}}
+@media(max-width:680px){.sidebar::before{height:3px}.topbar::after{left:0}.page-heading{padding:20px 18px}.brand-copy strong{font-size:20px}}
